@@ -17,5 +17,3 @@ jobs:
               run: curl -s --retry 5 --retry-connrefused http://localhost:5000/
             - run: npm install
             - run: npm run test:local
-            - name: Teardown
-              run: docker-componse down
