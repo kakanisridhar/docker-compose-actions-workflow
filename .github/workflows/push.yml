@@ -15,7 +15,7 @@ jobs:
               run: docker run --network container:webapp-frontend appropriate/curl -s --retry 10 --retry-connrefused http://localhost:5000/
             - name: Test local
               run: curl -s --retry 5 --retry-connrefused http://localhost:5000/
-              run: npm install
-              run: npm run test:local
+            - run: npm install
+            - run: npm run test:local
             - name: Teardown
               run: docker-componse down
